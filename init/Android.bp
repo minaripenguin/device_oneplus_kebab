@@ -12,6 +12,13 @@ cc_library_static {
 }
 
 prebuilt_etc {
+    name: "init.qcom.power.rc",
+    src: "init.qcom.power.rc",
+    sub_dir: "init/hw",
+    vendor: true,
+}
+
+prebuilt_etc {
     name: "fstab.qcom",
     src: "fstab.qcom",
     vendor: true,
