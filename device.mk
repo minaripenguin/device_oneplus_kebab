@@ -150,6 +150,7 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service_64 \
     libcamera_metadata_shim \
+    libcamera2ndk_vendor \
     vendor.qti.hardware.camera.postproc@1.0.vendor
 
 PRODUCT_COPY_FILES += \
@@ -386,6 +387,13 @@ PRODUCT_ENFORCE_RRO_TARGETS := *
 PRODUCT_PACKAGES += \
     OnePlusSettings
 
+# Oplus-fwk
+PRODUCT_PACKAGES += \
+    oplus-fwk
+
+PRODUCT_BOOT_JARS += \
+    oplus-fwk
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
@@ -550,6 +558,9 @@ PRODUCT_BOOT_JARS += \
 # RenderScript HAL
 PRODUCT_PACKAGES += \
     android.hardware.renderscript@1.0-impl
+
+# Inherit from the OnePlus Camera makefile.
+$(call inherit-product, vendor/oneplus/camera/camera-vendor.mk)
 
 # Inherit from the proprietary files makefile.
 $(call inherit-product, vendor/oneplus/kebab/kebab-vendor.mk)
