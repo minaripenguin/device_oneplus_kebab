@@ -1,6 +1,9 @@
 # Audio
 af.fast_track_multiplier=1
 
+# Bluetooth
+bluetooth.device.class_of_device=90,2,12
+
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
