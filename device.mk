@@ -489,6 +489,7 @@ PRODUCT_USE_PRODUCT_VNDK_OVERRIDE := true
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
+    android.hardware.wifi.hostapd@1.0.vendor \
     hostapd \
     libwpa_client \
     libwifi-hal-ctrl \
