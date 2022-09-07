@@ -14,11 +14,13 @@ $(call inherit-product, device/oneplus/kebab/device.mk)
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# Boot Animation
-TARGET_BOOT_ANIMATION_RES := 1080
+# Sushi Boot Animation
+SUSHI_BOOTANIMATION  := 1080
 
 # Official
-CUSTOM_BUILD_TYPE := Official
+RICE_OFFICIAL := true
+TARGET_ENABLE_BLUR := true
+TARGET_BUILD_GRAPHENEOS_CAMERA := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_kebab
