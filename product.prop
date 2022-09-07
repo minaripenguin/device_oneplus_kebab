@@ -37,3 +37,22 @@ ro.com.baidu.input.pad_port_r=14
 ro.com.baidu.input.pad_land_l=19
 ro.com.baidu.input.pad_land_r=19
 ro.com.baidu.input.pad_land_b=10
+
+# BG
+persist.sys.fw.bg_apps_limit=60
+
+# LMKD
+ro.lmk.kill_heaviest_task=true
+ro.lmk.use_new_strategy=true
+ro.lmk.super_critical=701
+ro.lmk.enhance_batch_kill=false
+ro.lmk.enable_watermark_check=true
+ro.lmk.enable_userspace_lmk=true
+ro.lmk.direct_reclaim_pressure=45
+ro.lmk.reclaim_scan_threshold=0
+
+# perf
+persist.sys.perf.topAppRenderThreadBoost.enable=false
+
+# Service reschedule
+persist.sys.am.reschedule_service=true
