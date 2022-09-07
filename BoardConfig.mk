@@ -10,7 +10,7 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 DEVICE_PATH := device/oneplus/kebab
 
 # Assert
-TARGET_OTA_ASSERT_DEVICE := kebab|OnePlus8T|oneplus8t|lemonades|OnePlus9R|oneplus9r|lemonkebab
+TARGET_OTA_ASSERT_DEVICE := kebab,OnePlus8T,OnePlus 8T,oneplus8t,lemonades,OnePlus9R,OnePlus 9R,oneplus9r,lemonkebab
 
 # A/B
 AB_OTA_UPDATER := true
