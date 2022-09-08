@@ -414,4 +414,13 @@
             <instance>cameraextensionservice</instance>
         </interface>
     </hal>
+   <hal format="hidl" optional="true">
+        <name>android.hardware.renderscript</name>
+        <transport arch="32+64">passthrough</transport>
+        <version>1.0</version>
+        <interface>
+            <name>IDevice</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
 </compatibility-matrix>
