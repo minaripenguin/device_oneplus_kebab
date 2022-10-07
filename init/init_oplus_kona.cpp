@@ -154,5 +154,4 @@ void vendor_load_properties() {
     set_ro_build_prop("product", model, false);
     property_override("ro.rice.chipset", "Snapdragon 870 5G");
     property_override("ro.rice.maintainer", "chaeyo.0");
-    property_override("ro.rice.version", "IceCream");
 }

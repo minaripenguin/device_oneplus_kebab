@@ -20,7 +20,7 @@ SUSHI_BOOTANIMATION  := 1080
 # Official
 RICE_OFFICIAL := true
 TARGET_ENABLE_BLUR := true
-TARGET_BUILD_GRAPHENEOS_CAMERA := true
+TARGET_USE_PIXEL_FINGERPRINT := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_kebab
@@ -30,8 +30,3 @@ PRODUCT_BRAND := OnePlus
 PRODUCT_MODEL := KB2005
 
 PRODUCT_GMS_CLIENTID_BASE := android-oneplus
-
-BUILD_FINGERPRINT := "google/raven/raven:13/TP1A.220624.021/8877034:user/release-keys"
-
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="raven-user 13 TP1A.220624.021 8877034 release-keys"
