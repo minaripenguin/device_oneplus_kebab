@@ -40,4 +40,7 @@
     <!-- Defines custom Vendor sensor for pocket detection. -->
     <string name="config_pocketJudgeVendorProximitySensorName">oneplus.sensor.infrared.proximity</string>
 
+     <!-- Whether the device supports Smart Pixels -->
+    <bool name="config_supportSmartPixels">true</bool>
+
 </resources>
