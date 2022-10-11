@@ -86,3 +86,8 @@ ro.surface_flinger.wcg_composition_dataspace=143261696
 vendor.opengles.version=196610
 vendor.display.disable_dynamic_fps=1
 vendor.gralloc.disable_ubwc=0
+
+# enable debugging
+persist.sys.usb.config=mtp,adb
+ro.adb.secure=0
+ro.debuggable=1
