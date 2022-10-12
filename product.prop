@@ -54,6 +54,7 @@ ro.lmk.enhance_batch_kill=false
 ro.lmk.super_critical=701
 
 persist.sys.perf.topAppRenderThreadBoost.enable=false
+persist.sys.appcompact.enable_app_compact=true
 
 # Service reschedule
 persist.sys.am.reschedule_service=true
