@@ -45,6 +45,72 @@ on init
     chown system system /sys/devices/platform/soc/1d84000.ufshc/auto_hibern8
     chmod 0660 /sys/devices/platform/soc/1d84000.ufshc/auto_hibern8
     start logd
+    
+    # make sure that there is a TA cpuset to modify for libperfmgr, 
+    # cgroups cpusets are created on init, just to make things sure
+    mkdir /dev/cpuset/top-app
+    copy /dev/cpuset/cpus /dev/cpuset/top-app/cpus
+    copy /dev/cpuset/mems /dev/cpuset/top-app/mems
+
+    mkdir /dev/cpuset/audio-app
+    copy /dev/cpuset/cpus /dev/cpuset/audio-app/cpus
+    copy /dev/cpuset/mems /dev/cpuset/audio-app/mems
+
+    # ifdef VENDOR_EDIT
+    # alden.zhang@OPTI, 2020/6/5, porting, [ITN-829] Improve sf performance
+    mkdir /dev/cpuset/display
+    copy /dev/cpuset/cpus /dev/cpuset/display/cpus
+    copy /dev/cpuset/mems /dev/cpuset/display/mems
+    # endif /* VENDOR_EDIT */
+
+    # ifdef VENDOR_EDIT
+    # kevin.feng@OPTI, 2020/9/23, camera-app performance
+    mkdir /dev/cpuset/camera-app
+    copy /dev/cpuset/cpus /dev/cpuset/camera-app/cpus
+    copy /dev/cpuset/mems /dev/cpuset/camera-app/mems
+    # endif /* VENDOR_EDIT */
+
+    # change permissions for all cpusets we'll touch at runtime
+    chown system system /dev/cpuset
+    chown system system /dev/cpuset/top-app
+    chown system system /dev/cpuset/audio-app
+    chown system system /dev/cpuset/top-app/tasks
+    chown system system /dev/cpuset/audio-app/tasks
+    chown system system /dev/cpuset/top-app/uclamp.min
+    
+    # ifdef VENDOR_EDIT
+    # alden.zhang@OPTi, 2020/6/5, porting, [ITN-829] Improve sf performance
+    chown system system /dev/cpuset/display
+    chown system system /dev/cpuset/display/tasks
+    # endif /* VENDOR_EDIT */
+
+    # ifdef VENDOR_EDIT
+    # kevin.feng@OPTI, 2020/9/23, camera-app performance
+    chown system system /dev/cpuset/camera-app
+    chown system system /dev/cpuset/camera-app/tasks
+    # endif /* VENDOR_EDIT */
+    
+    # ifdef VENDOR_EDIT
+    # alden.zhang@OPTi, 2020/6/5, porting, [ITN-829] Improve sf performance
+    chown system system /dev/cpuset/display
+    chown system system /dev/cpuset/display/tasks
+    # endif /* VENDOR_EDIT */
+
+    # ifdef VENDOR_EDIT
+    # kevin.feng@OPTI, 2020/9/23, camera-app performance
+    chown system system /dev/cpuset/camera-app
+    chown system system /dev/cpuset/camera-app/tasks
+    # endif /* VENDOR_EDIT */
+
+    chmod 0664 /dev/cpuset/top-app/tasks
+    chmod 0664 /dev/cpuset/audio-app/tasks
+    chmod 0664 /dev/cpuset/tasks
+    chmod 0664 /dev/cpuset/top-app/uclamp.min
+
+    # ifdef VENDOR_EDIT
+    # kevin.feng@OPTI, 2020/9/23, camera-app performance
+    chmod 0664 /dev/cpuset/camera-app/tasks
+    # endif /* VENDOR_EDIT */
 
 on early-fs
     start vold
@@ -63,6 +129,13 @@ on post-fs
     setrlimit 8 67108864 67108864
     write /dev/ipa 1
 
+    # ifdef VENDOR_EDIT
+    # JamesChang@Network, 2019/12/04, [OPN-102] chmod 666 for diag and ADPL log
+    chmod 0666 /dev/diag
+    chmod 0666 /dev/ipa_adpl
+    # endif
+
+
 on late-fs
     wait_for_prop hwservicemanager.ready true
     exec_start wait_for_keymaster
@@ -72,17 +145,50 @@ on post-fs-data
     mkdir /vendor/data/tombstones 0771 system system
     # Enable WLAN cold boot calibration
     write /sys/devices/platform/soc/b0000000.qcom,cnss-qca6390/fs_ready 1
+    
+    chown system system /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
+    chown system system /sys/class/kgsl/kgsl-3d0/devfreq/max_freq
+    chown system system /sys/class/kgsl/kgsl-3d0/force_rail_on
+    chown system system /sys/class/kgsl/kgsl-3d0/force_clk_on
+    chown system system /sys/class/kgsl/kgsl-3d0/idle_timer
+    chown system system /sys/class/devfreq/soc:qcom,cpubw/min_freq
+    chown system system /sys/class/devfreq/soc:qcom,gpubw/min_freq
+    chown system system /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_trigger_count
+    chown system system /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hist_memory
+    chown system system /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_length
+
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/devfreq/max_freq
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/force_rail_on
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/force_clk_on
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/idle_timer
+    chmod 0664 /sys/class/devfreq/soc:qcom,cpubw/min_freq
+    chown 0664 /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_length
+    chmod 0664 /sys/class/devfreq/soc:qcom,gpubw/min_freq 
+    chmod 0664 /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_trigger_count
+    chmod 0664 /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hist_memory
 
 on early-boot
     start vendor.sensors
 
 on boot
     write /dev/cpuset/audio-app/cpus 1-2
+    # ifdef VENDOR_EDIT
+    # alden.zhang@OPTI, 2020/6/5, porting, [ITN-829] Improve sf performance
+    write /dev/cpuset/display/cpus 4-7
+    # endif /* VENDOR_EDIT */
+
+    # ifdef VENDOR_EDIT
+    # kevin.feng@OPTI, 2020/9/23, camera-app performance
+    write /dev/cpuset/camera-app/cpus 0-6
+    # endif /* VENDOR_EDIT */
+
     # Add a cpuset for the camera daemon
     # We want all cores for camera
     # set default schedTune value for camera-daemon
-    write /dev/stune/camera-daemon/schedtune.prefer_idle 1
-    write /dev/stune/camera-daemon/schedtune.boost 0
+    write /dev/cpuset/camera-daemon/uclamp.latency_sensitive 1
+    write /dev/cpuset/camera-daemon/uclamp.boosted 0
+
     #USB controller configuration
     setprop vendor.usb.rndis.func.name "gsi"
     setprop vendor.usb.rmnet.func.name "gsi"
