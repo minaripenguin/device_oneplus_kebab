@@ -52,6 +52,10 @@ ro.lmk.enable_watermark_check=true
 ro.lmk.enable_userspace_lmk=true
 ro.lmk.enhance_batch_kill=false
 ro.lmk.super_critical=701
+ro.lmk.filecache_min_kb=153600
+ro.lmk.kill_timeout_ms=50
+ro.lmk.stall_limit_critical=40
+
 
 persist.sys.perf.topAppRenderThreadBoost.enable=false
 persist.sys.appcompact.enable_app_compact=true
