@@ -21,6 +21,7 @@ SUSHI_BOOTANIMATION  := 1080
 RICE_OFFICIAL := true
 TARGET_ENABLE_BLUR := true
 TARGET_USE_PIXEL_FINGERPRINT := true
+TARGET_ENABLE_OOS_GBOARD_PADDINGS := true
 
 # Device identifier. This must come after all inclusions.
 PRODUCT_NAME := lineage_kebab
