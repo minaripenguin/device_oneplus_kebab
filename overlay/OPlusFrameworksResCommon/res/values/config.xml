@@ -96,13 +96,7 @@
         <item>"/system/framework/services.jar"</item>
         <item>"/system/bin/surfaceflinger"</item>
         <item>"/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
-        <item>"/system/lib64/libRScpp.so"</item>
-        <item>"/system/lib64/libRS.so"</item>
-        <item>"/system/lib64/libRS_internal.so"</item>
-        <item>"/system/lib64/libbcinfo.so"</item>
-        <item>"/system/lib64/libRSDriver.so"</item>
-        <item>"/system/lib64/libRSCpuRef.so"</item>
-        <item>"/system/lib64/libblas.so"</item>
+        <item>"/system_ext/priv-app/SystemUI/oat/arm64/SystemUI.odex"</item>
     </string-array>
 
     <!-- Screen brightness used to dim the screen while dozing in a very low power state.
