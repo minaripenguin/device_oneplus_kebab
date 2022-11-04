@@ -9,7 +9,7 @@
       "Name": "STunePreferIdle",
       "Controller": "schedtune",
       "File": "schedtune.prefer_idle"
-    }
+    },
     {
       "Name": "UClampBoost",
       "Controller": "cpuset",
