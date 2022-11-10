@@ -1042,7 +1042,7 @@ vendor/lib64/libperipheral_client.so|371cc38073c9d9bf8614f992e57a5a9891691191
 vendor/lib64/libspcom.so|14f69e1c6ad4a6bbb5ea0b7e38e027ef1e7fc12a
 
 # Power-off alarm (product)
-product/app/PowerOffAlarm/PowerOffAlarm.apk|d6d473476375d9bee5f082e62b5244d016909efa
+product/app/PowerOffAlarm/PowerOffAlarm.apk|eda6abb2108245e143eafc66b42c9da2e37d416b
 
 # Power-off alarm (system)
 system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar
