@@ -45,7 +45,7 @@
 
     <!-- System Info -->
     <bool name="config_supportSystemInfo">true</bool>
-    <string name="config_sysCPUTemp">"/sys/class/thermal/thermal_zone0/temp"</string>
+    <string name="config_sysCPUTemp">"/sys/devices/virtual/thermal/thermal_zone100/temp"</string>
     <string name="config_sysBatteryTemp">"/sys/class/power_supply/battery/temp"</string>
     <string name="config_sysGPUFreq">"/sys/kernel/gpu/gpu_clock"</string>
     <string name="config_sysGPULoad">"/sys/kernel/gpu/gpu_busy"</string>
