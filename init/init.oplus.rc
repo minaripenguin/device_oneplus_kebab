@@ -11,11 +11,12 @@ on post-fs
     # System Vibration
     chown system system /sys/devices/platform/soc/a8c000.i2c/i2c-6/6-005a/leds/vibrator/level
 
-on fs
+on init
     # Charger
     write /proc/fastchg_fw_update 1
     write /proc/ui_soc_decimal 1
 
+on fs
     # Update touchpanel firmware in case we ship newer firmware in /odm
     write /proc/touchpanel/tp_fw_update 0
 
