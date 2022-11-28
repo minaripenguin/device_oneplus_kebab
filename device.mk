@@ -3,9 +3,11 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-
 # A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota.mk)
+
+# display-product.mk
+$(call inherit-product, hardware/qcom-caf/sm8250/display/config/display-product.mk)
 
 # Task profiles
 PRODUCT_COPY_FILES += \

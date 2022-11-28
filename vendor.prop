@@ -118,10 +118,8 @@ ro.vendor.product.device.db=OP_DEVICE
 ro.vendor.product.manufacturer.db=OP_PHONE
 
 # Display
-vendor.display.disable_hw_recovery_dump=1
 vendor.display.disable_offline_rotator=1
 vendor.display.disable_system_load_check=1
-vendor.display.enable_async_powermode=0
 vendor.display.enable_camera_smooth=1
 vendor.display.not_switch_qhd_120hz=1
 vendor.display.primary_mixer_stages=9
