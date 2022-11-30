@@ -11,3 +11,5 @@ allow hal_camera_default proc:file rw_file_perms;
 
 get_prop(hal_camera_default, vendor_exported_camera_prop)
 get_prop(hal_camera_default, vendor_oplus_camera_prop)
+
+set_prop(hal_camera_default, vendor_camera_prop)
