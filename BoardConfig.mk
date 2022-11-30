@@ -134,10 +134,24 @@ BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOT_HEADER_VERSION)
 BOARD_RAMDISK_USE_LZ4 := true
 NEED_KERNEL_MODULE_SYSTEM := true
 TARGET_KERNEL_ARCH := arm64
-TARGET_KERNEL_SOURCE := kernel/oneplus/sm8250
+TARGET_KERNEL_ADDITIONAL_FLAGS := DTC=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc
+TARGET_KERNEL_ADDITIONAL_FLAGS += AR=$(shell pwd)/prebuilts/clang/host/linux-x86/clang-r475365/bin/llvm-ar
+TARGET_KERNEL_ADDITIONAL_FLAGS += AS=llvm-as
+TARGET_KERNEL_ADDITIONAL_FLAGS += BRAND_SHOW_FLAG=oneplus
+TARGET_KERNEL_ADDITIONAL_FLAGS += DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc
+TARGET_KERNEL_ADDITIONAL_FLAGS += HOSTCFLAGS="-Wno-unused-command-line-argument"
+TARGET_KERNEL_ADDITIONAL_FLAGS += LD=$(shell pwd)/prebuilts/clang/host/linux-x86/clang-r475365/bin/ld.lld
+TARGET_KERNEL_ADDITIONAL_FLAGS += LLVM=1
+TARGET_KERNEL_ADDITIONAL_FLAGS += LLVM_IAS=1
+TARGET_KERNEL_ADDITIONAL_FLAGS += NM=llvm-nm
+TARGET_KERNEL_ADDITIONAL_FLAGS += OBJCOPY=llvm-objcopy
+TARGET_KERNEL_ADDITIONAL_FLAGS += OBJDUMP=llvm-objdump
+TARGET_KERNEL_ADDITIONAL_FLAGS += STRIP=llvm-strip
+TARGET_KERNEL_CLANG_VERSION := r475365
 TARGET_KERNEL_CLANG_COMPILE := true
 TARGET_KERNEL_CONFIG := vendor/kona-perf_defconfig
-TARGET_KERNEL_ADDITIONAL_FLAGS := DTC=$(shell pwd)/prebuilts/misc/$(HOST_OS)-x86/dtc/dtc DTC_EXT=$(shell pwd)/prebuilts/misc/linux-x86/dtc/dtc HOSTCFLAGS="-fuse-ld=lld -Wno-unused-command-line-argument"  AS=llvm-as AR=llvm-ar NM=llvm-nm OBJCOPY=llvm-objcopy OBJDUMP=llvm-objdump STRIP=llvm-strip LLVM=1 LLVM_IAS=1 BRAND_SHOW_FLAG=oneplus
+TARGET_KERNEL_OPTIONAL_LD := true
+TARGET_KERNEL_SOURCE := kernel/oneplus/sm8250
 
 # Platform
 BOARD_USES_QCOM_HARDWARE := true
