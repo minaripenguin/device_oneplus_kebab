@@ -6,3 +6,8 @@ allow hal_camera_default proc_meminfo:file r_file_perms;
 
 allow hal_camera_default vendor_persist_camera_file:dir w_dir_perms;
 allow hal_camera_default vendor_persist_camera_file:file create_file_perms;
+
+allow hal_camera_default proc:file rw_file_perms;
+
+get_prop(hal_camera_default, vendor_exported_camera_prop)
+get_prop(hal_camera_default, vendor_oplus_camera_prop)
