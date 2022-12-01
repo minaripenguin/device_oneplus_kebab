@@ -9,16 +9,6 @@
       "Name": "STunePreferIdle",
       "Controller": "schedtune",
       "File": "schedtune.prefer_idle"
-    },
-    {
-      "Name": "UClampBoost",
-      "Controller": "cpuset",
-      "File": "uclamp.boosted"
-    },
-    {
-      "Name": "UClampLatencySensitive",
-      "Controller": "cpuset",
-      "File": "uclamp.latency_sensitive"
     }
   ],
 
@@ -30,7 +20,7 @@
           "Name": "JoinCgroup",
           "Params":
           {
-            "Controller": "cpuset",
+            "Controller": "schedtune",
             "Path": "background"
           }
         }
@@ -43,7 +33,7 @@
           "Name": "JoinCgroup",
           "Params":
           {
-            "Controller": "cpuset",
+            "Controller": "schedtune",
             "Path": ""
           }
         }
@@ -56,7 +46,7 @@
           "Name": "JoinCgroup",
           "Params":
           {
-            "Controller": "cpuset",
+            "Controller": "schedtune",
             "Path": "foreground"
           }
         }
@@ -69,7 +59,7 @@
           "Name": "JoinCgroup",
           "Params":
           {
-            "Controller": "cpuset",
+            "Controller": "schedtune",
             "Path": "top-app"
           }
         }
@@ -95,7 +85,7 @@
           "Name": "JoinCgroup",
           "Params":
           {
-            "Controller": "cpuset",
+            "Controller": "schedtune",
             "Path": "camera-daemon"
           }
         }
@@ -121,7 +111,7 @@
           "Name": "SetAttribute",
           "Params":
           {
-            "Name": "UClampLatencySensitive",
+            "Name": "STunePreferIdle",
             "Value": "1"
           }
         }
@@ -134,7 +124,7 @@
           "Name": "SetAttribute",
           "Params":
           {
-            "Name": "UClampLatencySensitive",
+            "Name": "STunePreferIdle",
             "Value": "0"
           }
         }

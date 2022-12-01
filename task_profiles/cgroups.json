@@ -7,14 +7,6 @@
       "UID": "system",
       "GID": "system",
       "Optional": true
-    },
-    {
-      "Controller": "cpuset",
-      "Path": "/dev/cpuset",
-      "Mode": "0755",
-      "UID": "system",
-      "GID": "system",
-      "Optional": true
     }
   ]
 }
