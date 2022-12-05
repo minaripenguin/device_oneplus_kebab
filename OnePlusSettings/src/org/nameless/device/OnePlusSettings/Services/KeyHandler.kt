@@ -22,8 +22,8 @@ import org.nameless.device.OnePlusSettings.Utils.VolumeUtils
 
 @Keep
 class KeyHandler(context: Context) : DeviceKeyHandler {
-    private val audioManager = context.getSystemService(AudioManager::class.java)
-    private val inputManager = context.getSystemService(InputManager::class.java)
+    private val audioManager = context.getSystemService(AudioManager::class.java)!!
+    private val inputManager = context.getSystemService(InputManager::class.java)!!
     private val ctx = context
 
     private var lastPos = POSITION_BOTTOM
