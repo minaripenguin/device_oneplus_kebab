@@ -488,6 +488,8 @@ PRODUCT_COPY_FILES += \
 # VNDK
 PRODUCT_USE_PRODUCT_VNDK_OVERRIDE := true
 
+TARGET_USES_WPA_CLIENT := true
+
 # WiFi
 PRODUCT_PACKAGES += \
     android.hardware.wifi@1.0-service \
@@ -496,6 +498,7 @@ PRODUCT_PACKAGES += \
     libwpa_client \
     libwifi-hal-ctrl \
     libwifi-hal-qcom \
+    libwpa_client \
     vendor.qti.hardware.wifi.hostapd@1.2.vendor \
     vendor.qti.hardware.wifi.supplicant@2.1.vendor \
     wpa_supplicant \
