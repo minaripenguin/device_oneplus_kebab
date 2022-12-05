@@ -2,7 +2,11 @@
 genfscon proc /tristatekey    u:object_r:vendor_proc_tri_state_key:s0
 
 # Charging
+genfscon proc /wireless                                                u:object_r:vendor_proc_wireless:s0
 genfscon sysfs /devices/platform/soc/c440000.qcom,spmi/spmi-0/spmi0-02/c440000.qcom,spmi:qcom,pm8150b@2:qcom,qpnp-smb5/power_supply/ac    u:object_r:vendor_sysfs_battery_supply:s0
+genfscon sysfs /devices/platform/soc/soc:oneplus_wlchg/power_supply    u:object_r:vendor_sysfs_usb_supply:s0
+genfscon sysfs /devices/platform/soc/soc:oplus,chg_gki/power_supply    u:object_r:vendor_sysfs_usb_supply:s0
+genfscon sysfs /devices/platform/soc/soc:oplus,chg_intf/oplus_chg      u:object_r:vendor_sysfs_usb_supply:s0
 
 # Display
 genfscon proc /devinfo/lcd              u:object_r:vendor_proc_display:s0
@@ -39,6 +43,9 @@ genfscon sysfs /devices/platform/soc/soc:sensor_fb    u:object_r:vendor_sysfs_se
 genfscon proc /oplusVersion    u:object_r:vendor_proc_oplus_version:s0
 
 # Vibrator
+genfscon sysfs /devices/platform/soc/88c000.i2c/i2c-6/6-005a/leds/vibrator    u:object_r:sysfs_vibrator:s0
+genfscon sysfs /devices/platform/soc/89c000.i2c/i2c-2/2-005a/leds/vibrator    u:object_r:sysfs_vibrator:s0
+genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-5/5-005a/leds/vibrator    u:object_r:sysfs_vibrator:s0
 genfscon sysfs /devices/platform/soc/a8c000.i2c/i2c-6/6-005a/leds/vibrator    u:object_r:sysfs_vibrator:s0
 
 # Wakeup
