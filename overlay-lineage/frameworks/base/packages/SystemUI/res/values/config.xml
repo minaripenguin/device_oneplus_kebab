@@ -35,4 +35,6 @@
          Leave 1 if you have mA, put 1000 if you have µA -->
     <integer name="config_currentInfoDivider" translatable="false">1</integer>
 
+    <!-- Disable/Enable Ambient display qs tile -->
+    <bool name="config_enable_ambientQSTile">false</bool>
 </resources>
