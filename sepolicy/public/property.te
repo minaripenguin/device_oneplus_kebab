@@ -2,8 +2,17 @@
 vendor_public_prop(vendor_exported_camera_prop);
 vendor_public_prop(vendor_oplus_camera_prop);
 
+# Display
+vendor_public_prop(vendor_exported_display_prop);
+
+# Engineering
+vendor_public_prop(system_exported_eng_prop);
+
 # Fingerprint
 vendor_internal_prop(system_fingerprint_prop)
+
+# Modem
+vendor_public_prop(system_exported_modem_prop);
 
 # Sensors
 vendor_public_prop(vendor_sensors_als_prop)
