@@ -2,6 +2,9 @@
 oplus.camera.                          u:object_r:vendor_oplus_camera_prop:s0
 oplus.camera.packname                  u:object_r:vendor_oplus_camera_prop:s0
 
+# Build
+ro.build.display.full_id                u:object_r:system_exported_build_prop:s0
+
 # Display
 persist.sys.display.iris.absent         u:object_r:vendor_exported_display_prop:s0
 
@@ -27,6 +30,7 @@ persist.sys.log.af                  u:object_r:exported_system_prop:s0
 persist.sys.log.awb                 u:object_r:exported_system_prop:s0
 
 # Modem
+ro.oplus.radio.sip_busy_tone                u:object_r:system_exported_modem_prop:s0
 persist.sys.enable_modem_dump               u:object_r:system_exported_modem_prop:s0
 persist.sys.dump                            u:object_r:system_exported_modem_prop:s0
 persist.sys.oplus.wifi.fulldump.enable      u:object_r:system_exported_modem_prop:s0

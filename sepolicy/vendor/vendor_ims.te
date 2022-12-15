@@ -1,1 +1,2 @@
 allow vendor_ims vendor_diag_device:chr_file rw_file_perms;
+get_prop(vendor_ims, system_exported_modem_prop)
