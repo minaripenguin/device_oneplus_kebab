@@ -81,6 +81,17 @@ PRODUCT_PACKAGES += \
 
 AUDIO_HAL_DIR := hardware/qcom-caf/sm8250/audio
 
+# BT libs
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/bluetooth/libs/lib/libldacBT_abr.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libldacBT_abr.so \
+    $(LOCAL_PATH)/bluetooth/libs/lib/libldacBT_enc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/libldacBT_enc.so \
+    $(LOCAL_PATH)/bluetooth/libs/lib/liblhdc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/liblhdc.so \
+    $(LOCAL_PATH)/bluetooth/libs/lib/liblhdcBT_enc.so:$(TARGET_COPY_OUT_SYSTEM)/lib/liblhdcBT_enc.so \
+    $(LOCAL_PATH)/bluetooth/libs/lib64/libldacBT_abr.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libldacBT_abr.so \
+    $(LOCAL_PATH)/bluetooth/libs/lib64/libldacBT_enc.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/libldacBT_enc.so \
+    $(LOCAL_PATH)/bluetooth/libs/lib64/liblhdc.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/liblhdc.so \
+    $(LOCAL_PATH)/bluetooth/libs/lib64/liblhdcBT_enc.so:$(TARGET_COPY_OUT_SYSTEM)/lib64/liblhdcBT_enc.so
+
 PRODUCT_COPY_FILES += \
     $(AUDIO_HAL_DIR)/configs/common/bluetooth_qti_hearing_aid_audio_policy_configuration.xml:$(TARGET_COPY_OUT_VENDOR)/etc/bluetooth_qti_hearing_aid_audio_policy_configuration.xml \
     $(AUDIO_HAL_DIR)/configs/kona/audio_platform_info.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_platform_info.xml \
