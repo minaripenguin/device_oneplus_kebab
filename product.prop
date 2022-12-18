@@ -23,6 +23,9 @@ bluetooth.profile.pbap.server.enabled=true
 bluetooth.profile.sap.server.enabled=true
 bluetooth.profile.vcp.controller.enabled=true
 
+# FS-verity
+ro.apk_verity.mode=2
+
 # FUSE passthrough
 persist.sys.fuse.passthrough.enable=true
 
