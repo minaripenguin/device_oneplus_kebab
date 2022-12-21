@@ -146,6 +146,8 @@ odm/etc/camera/darksight/darksight_main.bin
 odm/etc/camera/darksight/darksight_ultrawide.bin
 odm/etc/camera/calibrationOutput_uw.bin
 odm/etc/camera/distortion_result.bin
+# Camera
+odm/bin/vl53l1_daemon_main
 odm/etc/camera/fb_default
 odm/etc/camera/fwk_config.json
 odm/lib/libaiboost_nnlib_sr.so
@@ -184,6 +186,8 @@ odm/lib64/libaiboost_sr.so
 odm/lib64/libaiboost_ubwc.so
 odm/lib64/libfastov_dsp.so
 odm/lib64/libormshalclient.so
+odm/lib64/libvl53l1_daemon.so
+odm/lib64/sensors.hal.tof.so
 odm/lib64/vendor.oplus.hardware.cammidasservice@1.0.so
 
 # Camera (vendor)
