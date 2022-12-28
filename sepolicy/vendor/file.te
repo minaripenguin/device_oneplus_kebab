@@ -1,6 +1,10 @@
 # Alert Slider
 type vendor_proc_tri_state_key, fs_type, proc_type;
 
+# Camera
+type cam_laser_sysfs, fs_type, sysfs_type;
+type public_adsprpcd_file, file_type;
+
 # Charging
 type vendor_proc_wireless, fs_type, proc_type;
 

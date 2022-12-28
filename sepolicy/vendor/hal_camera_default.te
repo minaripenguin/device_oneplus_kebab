@@ -2,7 +2,11 @@ hal_attribute_hwservice(hal_camera, vendor_hal_camera_extension_hwservice)
 
 hal_client_domain(hal_camera_default, vendor_hal_cameraMDM)
 
+allow hal_camera_default vendor_hal_camera_postproc_hwservice:hwservice_manager find;
 allow hal_camera_default vendor_hal_orms_hwservice:hwservice_manager find;
+
+allow hal_camera_default input_device:dir r_dir_perms;
+allow hal_camera_default input_device:chr_file r_file_perms;
 
 allow hal_camera_default mnt_vendor_file:dir search;
 
@@ -17,3 +21,5 @@ get_prop(hal_camera_default, vendor_exported_camera_prop)
 get_prop(hal_camera_default, vendor_oplus_camera_prop)
 
 set_prop(hal_camera_default, vendor_camera_prop)
+
+rw_dir_file(hal_camera_default, cam_laser_sysfs)
