@@ -1,32 +1,37 @@
 # Bluetooth
 persist.sys.bt.a2dp.pendingtime                  u:object_r:exported_system_prop:s0
 
-# Camera
-oplus.camera.                                    u:object_r:exported_system_prop:s0
-oplus.CTP.Tunningmode                            u:object_r:exported_system_prop:s0
-persist.bps.debug                                u:object_r:exported_system_prop:s0
-persist.camera.                                  u:object_r:exported_system_prop:s0
-persist.vendor.aps.debug.framenum                u:object_r:exported_system_prop:s0
-persist.vendor.arcsoft.sn.dumprawinfo            u:object_r:exported_system_prop:s0
-persist.vendor.oplus.rawhdr.dump                 u:object_r:exported_system_prop:s0
-ro.camera.req.                                   u:object_r:exported_system_prop:s0
-ro.camera.res.                                   u:object_r:exported_system_prop:s0
-ro.oplus.                                        u:object_r:exported_system_prop:s0
-ro.oppo.                                         u:object_r:exported_system_prop:s0
-ro.vendor.gfx.32bit.target                       u:object_r:exported_system_prop:s0
-ro.vendor.oplus.                                 u:object_r:exported_system_prop:s0
-vendor.aps.                                      u:object_r:exported_system_prop:s0
-vendor.arcsoft.                                  u:object_r:exported_system_prop:s0
-vendor.camera.                                   u:object_r:exported_system_prop:s0
-vendor.debug.is.rioapk                           u:object_r:exported_system_prop:s0
-vendor.debug.magnet.enable                       u:object_r:exported_system_prop:s0
-vendor.oplus.                                    u:object_r:exported_system_prop:s0
-vendor.oppo.                                     u:object_r:exported_system_prop:s0
-vendor.property.debug.caliexif.enable            u:object_r:exported_system_prop:s0
-oplus.camera.packname                  u:object_r:vendor_oplus_camera_prop:s0
+# Camera - vendor
+oplus.camera.                                    u:object_r:vendor_exported_camera_prop:s0
+oplus.CTP.Tunningmode                            u:object_r:vendor_exported_camera_prop:s0
+persist.bps.debug                                u:object_r:vendor_exported_camera_prop:s0
+persist.vendor.aps.debug.framenum                u:object_r:vendor_exported_camera_prop:s0
+persist.vendor.arcsoft.sn.dumprawinfo            u:object_r:vendor_exported_camera_prop:s0
+persist.vendor.oplus.rawhdr.dump                 u:object_r:vendor_exported_camera_prop:s0
+ro.oplus.                                        u:object_r:vendor_exported_camera_prop:s0
+ro.oppo.                                         u:object_r:vendor_exported_camera_prop:s0
+ro.vendor.gfx.32bit.target                       u:object_r:vendor_exported_camera_prop:s0
+ro.vendor.oplus.                                 u:object_r:vendor_exported_camera_prop:s0
+vendor.aps.                                      u:object_r:vendor_exported_camera_prop:s0
+vendor.arcsoft.                                  u:object_r:vendor_exported_camera_prop:s0
+vendor.camera.                                   u:object_r:vendor_exported_camera_prop:s0
+vendor.debug.is.rioapk                           u:object_r:vendor_exported_camera_prop:s0
+vendor.debug.magnet.enable                       u:object_r:vendor_exported_camera_prop:s0
+vendor.oplus.                                    u:object_r:vendor_exported_camera_prop:s0
+vendor.oppo.                                     u:object_r:vendor_exported_camera_prop:s0
+vendor.property.debug.caliexif.enable            u:object_r:vendor_exported_camera_prop:s0
+oplus.camera.packname                  	 u:object_r:vendor_exported_camera_prop:s0
+
+# Camera - system
+ro.camera.req.                                   u:object_r:system_exported_camera_prop:s0
+ro.camera.res.                                   u:object_r:system_exported_camera_prop:s0
+ro.camera.req.fmq.size                  u:object_r:system_exported_camera_prop:s0
+ro.camera.res.fmq.size                  u:object_r:system_exported_camera_prop:s0
+persist.camera.                                  u:object_r:system_exported_camera_prop:s0
 
 # Build
 ro.build.display.full_id                u:object_r:system_exported_build_prop:s0
+ro.hardware.chipname            u:object_r:system_exported_build_prop:s0
 
 # Display
 persist.sys.display.iris.absent         u:object_r:vendor_exported_display_prop:s0
@@ -35,15 +40,9 @@ persist.sys.display.iris.absent         u:object_r:vendor_exported_display_prop:
 ro.oplus.image.my_engineering.type    u:object_r:system_exported_eng_prop:s0
 
 # Fingerprint
-gf.debug.dump_data    		       u:object_r:system_fingerprint_prop:s0
-oplus.fingerprint.                     u:object_r:system_fingerprint_prop:s0
-oplus.optical.goodix.fp                u:object_r:system_fingerprint_prop:s0
-
-ro.camera.req.fmq.size                  u:object_r:vendor_exported_camera_prop:s0
-ro.camera.res.fmq.size                  u:object_r:vendor_exported_camera_prop:s0
-
-# Hardware
-ro.hardware.chipname            u:object_r:exported_default_prop:s0
+gf.debug.dump_data    		       u:object_r:vendor_exported_fingerprint_prop:s0
+oplus.fingerprint.                     u:object_r:vendor_exported_fingerprint_prop:s0
+oplus.optical.goodix.fp                u:object_r:vendor_exported_fingerprint_prop:s0
 
 # Logging
 persist.camera.assert.panic         u:object_r:exported_system_prop:s0
@@ -52,17 +51,17 @@ persist.sys.assert.panic            u:object_r:exported_system_prop:s0
 persist.sys.log.                    u:object_r:exported_system_prop:s0
 
 # Modem
-ro.oplus.radio.sip_busy_tone                u:object_r:system_exported_modem_prop:s0
-persist.sys.enable_modem_dump               u:object_r:system_exported_modem_prop:s0
-persist.sys.dump                            u:object_r:system_exported_modem_prop:s0
-persist.sys.oplus.wifi.fulldump.enable      u:object_r:system_exported_modem_prop:s0
+ro.oplus.radio.sip_busy_tone                u:object_r:vendor_exported_modem_prop:s0
+persist.sys.enable_modem_dump               u:object_r:vendor_exported_modem_prop:s0
+persist.sys.dump                            u:object_r:vendor_exported_modem_prop:s0
+persist.sys.oplus.wifi.fulldump.enable      u:object_r:vendor_exported_modem_prop:s0
 
 # Radio
 ro.sys.reserve.integrate    u:object_r:exported_system_prop:s0
 
 # SVN
-ro.build.version.svn      u:object_r:exported_system_prop:s0
-ro.build.version.svn.c    u:object_r:exported_system_prop:s0
+ro.build.version.svn      u:object_r:system_exported_build_prop:s0
+ro.build.version.svn.c    u:object_r:system_exported_build_prop:s0
 
 # Sensors
 vendor.sensors.als_correction.      u:object_r:vendor_sensors_als_prop:s0

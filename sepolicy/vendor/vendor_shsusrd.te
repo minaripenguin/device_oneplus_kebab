@@ -1,1 +1,1 @@
-get_prop(vendor_shsusrd, system_exported_modem_prop)
+get_prop(vendor_shsusrd, vendor_exported_modem_prop)

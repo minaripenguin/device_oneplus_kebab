@@ -1,1 +1,1 @@
-get_prop(vendor_pd_mapper, system_exported_modem_prop)
+get_prop(vendor_pd_mapper, vendor_exported_modem_prop)

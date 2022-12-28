@@ -6,4 +6,4 @@ create_dir_file(vendor_wcnss_service, mnt_vendor_file)
 
 set_prop(vendor_wcnss_service, vendor_vold_prop)
 
-get_prop(vendor_wcnss_service, system_exported_modem_prop)
+get_prop(vendor_wcnss_service, vendor_exported_modem_prop)
