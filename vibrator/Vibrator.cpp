@@ -542,6 +542,17 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
             ledVib.write_value(LED_DEVICE "/brightness", "1");
             ledVib.write_value(LED_DEVICE "/activate", "0");
             break;
+        case Effect::TEXTURE_TICK:
+            ledVib.write_value(LED_DEVICE "/activate", "0");
+            ledVib.write_value(LED_DEVICE "/f0_data", F0_DATA_VAL);
+            ledVib.write_value(LED_DEVICE "/duration", "15");
+            ledVib.write_value(LED_DEVICE "/vmax", "0x16");
+            ledVib.write_value(LED_DEVICE "/gain", "0x60");
+            ledVib.write_value(LED_DEVICE "/loop", "0x00 0x00");
+            ledVib.write_value(LED_DEVICE "/seq", "0x00 0x03");
+            ledVib.write_value(LED_DEVICE "/brightness", "1");
+            ledVib.write_value(LED_DEVICE "/activate", "0");
+            break;
         default:
             return ndk::ScopedAStatus(AStatus_fromExceptionCode(EX_UNSUPPORTED_OPERATION));
         }
@@ -574,7 +585,7 @@ ndk::ScopedAStatus Vibrator::perform(Effect effect, EffectStrength es, const std
 
 ndk::ScopedAStatus Vibrator::getSupportedEffects(std::vector<Effect>* _aidl_return) {
     *_aidl_return = {Effect::CLICK, Effect::DOUBLE_CLICK, Effect::TICK, Effect::THUD,
-                     Effect::POP, Effect::HEAVY_CLICK};
+                     Effect::POP, Effect::HEAVY_CLICK, Effect::TEXTURE_TICK};
     return ndk::ScopedAStatus::ok();
 }
 
