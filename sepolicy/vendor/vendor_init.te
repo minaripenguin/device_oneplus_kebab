@@ -7,4 +7,6 @@ set_prop(vendor_init, vendor_exported_power_prop)
 # Allow vendor init to set SSR property
 set_prop(vendor_init, vendor_ssr_prop)
 
+set_prop(vendor_init, vendor_exported_camera_prop)
+
 

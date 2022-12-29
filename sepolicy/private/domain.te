@@ -1,0 +1,2 @@
+get_prop({coredomain appdomain shell}, system_exported_camera_prop)
+get_prop({coredomain appdomain shell}, system_exported_build_prop)

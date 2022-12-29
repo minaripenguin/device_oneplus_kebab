@@ -25,8 +25,8 @@ oplus.camera.packname                  	 u:object_r:vendor_exported_camera_prop:
 # Camera - system
 ro.camera.req.                                   u:object_r:system_exported_camera_prop:s0
 ro.camera.res.                                   u:object_r:system_exported_camera_prop:s0
-ro.camera.req.fmq.size                  u:object_r:system_exported_camera_prop:s0
-ro.camera.res.fmq.size                  u:object_r:system_exported_camera_prop:s0
+ro.camera.req.fmq.size                  	 u:object_r:system_exported_camera_prop:s0
+ro.camera.res.fmq.size                  	 u:object_r:system_exported_camera_prop:s0
 persist.camera.                                  u:object_r:system_exported_camera_prop:s0
 
 # Build
@@ -60,8 +60,8 @@ persist.sys.oplus.wifi.fulldump.enable      u:object_r:vendor_exported_modem_pro
 ro.sys.reserve.integrate    u:object_r:exported_system_prop:s0
 
 # SVN
-ro.build.version.svn      u:object_r:system_exported_build_prop:s0
-ro.build.version.svn.c    u:object_r:system_exported_build_prop:s0
+ro.build.version.svn      u:object_r:exported_system_prop:s0
+ro.build.version.svn.c    u:object_r:exported_system_prop:s0
 
 # Sensors
 vendor.sensors.als_correction.      u:object_r:vendor_sensors_als_prop:s0
