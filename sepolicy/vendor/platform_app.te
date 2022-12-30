@@ -20,3 +20,5 @@ allow platform_app vendor_sysfs_kgsl:file r_file_perms;
 allow platform_app adsprpcd_file:dir { search getattr read };
 
 allow platform_app zygote:unix_stream_socket getopt;
+
+r_dir_file(platform_app, vendor_proc_ui_soc_decimal)
