@@ -18,6 +18,7 @@ type vendor_proc_engineer, fs_type, proc_type;
 
 # Fingerprint
 type vendor_proc_fingerprint, fs_type, proc_type;
+type vendor_persist_fingerprint_file, file_type;
 
 # Opboot
 type vendor_proc_oplus_boot, fs_type, proc_type;

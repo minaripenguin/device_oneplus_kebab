@@ -137,6 +137,8 @@
 /(odm|vendor/odm)/bin/hw/vendor\.oplus\.hardware\.biometrics\.fingerprint@2\.1-service                u:object_r:hal_fingerprint_default_exec:s0
 /(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.oplus_kona    u:object_r:hal_fingerprint_default_exec:s0
 /dev/goodix_fp                                                                                        u:object_r:fingerprint_device:s0
+/dev/jiiov_fp                                                                                    u:object_r:fingerprint_device:s0
+/mnt/vendor/persist/fingerprint(/.*)?                                                            u:object_r:vendor_persist_fingerprint_file:s0
 
 # Measured FPS
 /sys/devices/platform/soc/ae00000.qcom,mdss_mdp/drm/card0/sde-crtc-0/measured_fps       u:object_r:vendor_sysfs_graphics:s0
