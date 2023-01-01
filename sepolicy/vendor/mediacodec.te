@@ -1,2 +1,3 @@
 allow mediacodec hal_dms_hwservice:hwservice_manager find;
+get_prop(mediacodec, vendor_exported_camera_prop)
 binder_call(mediacodec, hal_dms_default)
