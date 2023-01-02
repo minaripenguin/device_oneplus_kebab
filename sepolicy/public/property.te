@@ -21,7 +21,7 @@ system_public_prop(vendor_exported_modem_prop);
 vendor_public_prop(vendor_exported_power_prop)
 
 # Sensors
-vendor_public_prop(vendor_sensors_als_prop)
+system_public_prop(vendor_sensors_als_prop)
 
 # Version
 system_vendor_config_prop(system_oplus_project_prop)
