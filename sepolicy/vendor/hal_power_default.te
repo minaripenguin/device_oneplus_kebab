@@ -8,7 +8,6 @@ allow hal_power_default {
 }:dir search;
 
 allow hal_power_default {
-  cgroup
   proc
   vendor_sysfs_devfreq
   sysfs_devices_system_cpu
@@ -20,6 +19,11 @@ allow hal_power_default {
   file
   lnk_file
 } rw_file_perms;
+
+allow hal_power_default cgroup:file rw_file_perms;
+allow hal_power_default cgroup_v2:file rw_file_perms;
+r_dir_file(hal_power_default, cgroup)
+r_dir_file(hal_power_default, cgroup_v2)
 
 # Set scheduling info for apps (for adpf)
 allow hal_power_default appdomain:process { getsched setsched };
