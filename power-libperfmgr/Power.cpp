@@ -58,6 +58,7 @@ Power::Power(std::shared_ptr<HintManager> hm)
     : mHintManager(hm),
       mInteractionHandler(nullptr),
       mSustainedPerfModeOn(false),
+      mBatterySaverOn(false),
       mAdpfRateNs(
               ::android::base::GetIntProperty(kPowerHalAdpfRateProp, kPowerHalAdpfRateDefault)) {
     mInteractionHandler = std::make_unique<InteractionHandler>(mHintManager);
@@ -88,6 +89,12 @@ Power::Power(std::shared_ptr<HintManager> hm)
     LOG(INFO) << "PowerHAL ready to take hints, Adpf update rate: " << mAdpfRateNs;
 }
 
+void endAllHints() {
+    for (std::string hint: HintManager::GetInstance()->GetHints()) {
+        HintManager::GetInstance()->EndHint(hint);
+    }
+}
+
 ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
     LOG(DEBUG) << "Power setMode: " << toString(type) << " to: " << enabled;
     ATRACE_INT(toString(type).c_str(), enabled);
@@ -105,14 +112,23 @@ ndk::ScopedAStatus Power::setMode(Mode type, bool enabled) {
 #endif
         case Mode::SUSTAINED_PERFORMANCE:
             if (enabled) {
+                endAllHints();
                 mHintManager->DoHint("SUSTAINED_PERFORMANCE");
+            } else {
+                mHintManager->EndHint("SUSTAINED_PERFORMANCE");
             }
-            mSustainedPerfModeOn = true;
+            mSustainedPerfModeOn = enabled;
+            break;
+        case Mode::LOW_POWER:
+            if (enabled) {
+                endAllHints();
+                HintManager::GetInstance()->DoHint("LOW_POWER");
+            } else {
+                HintManager::GetInstance()->EndHint("LOW_POWER");
+            }
+            mBatterySaverOn = enabled;
             break;
         case Mode::LAUNCH:
-            if (mSustainedPerfModeOn) {
-                break;
-            }
             [[fallthrough]];
 #ifndef TAP_TO_WAKE_NODE
         case Mode::DOUBLE_TAP_TO_WAKE:
