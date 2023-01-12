@@ -1,0 +1,1 @@
+genfscon sysfs /dev/stune/[^/]+(/.*)?		u:object_r:sysfs_perf_file:s0
