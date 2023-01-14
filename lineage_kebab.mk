@@ -18,7 +18,7 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 SUSHI_BOOTANIMATION  := 1080
 
 # Official
-RICE_OFFICIAL := true
+RICE_MAINTAINER := minaripenguin
 WITH_GMS := true
 TARGET_CORE_GMS := true
 TARGET_FACE_UNLOCK_SUPPORTED := false
