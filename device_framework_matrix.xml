@@ -1,5 +1,15 @@
 <compatibility-matrix version="4.0" type="framework">
     <hal format="hidl" optional="true">
+        <name>android.hardware.graphics.allocator</name>
+        <transport>hwbinder</transport>
+        <version>3.0</version>
+        <version>4.0</version>
+        <interface>
+            <name>IAllocator</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
         <name>android.hardware.biometrics.fingerprint</name>
         <version>2.3</version>
         <interface>
@@ -248,6 +258,7 @@
         <interface>
             <name>IOrmsHalService</name>
             <instance>default</instance>
+            <instance>ORMS_HAL_PROXY</instance>
         </interface>
     </hal>
     <hal format="hidl" optional="true">
@@ -429,6 +440,15 @@
         <interface>
             <name>IDevice</name>
             <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="hidl" optional="true">
+        <name>vendor.oplus.hardware.commondcs</name>
+        <transport>hwbinder</transport>
+        <version>1.0</version>
+        <interface>
+            <name>ICommonDcsHalService</name>
+            <instance>commondcsservice</instance>
         </interface>
     </hal>
 </compatibility-matrix>
