@@ -7,4 +7,6 @@ binder_call(system_app, hal_power_default)
 
 allow system_app zygote:unix_stream_socket getopt;
 
+allow system_app sysfs_leds:dir search;
+
 
