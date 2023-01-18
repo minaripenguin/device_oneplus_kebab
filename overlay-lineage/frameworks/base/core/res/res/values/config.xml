@@ -53,4 +53,7 @@
     <integer name="config_sysBatteryTempMultiplier">10</integer>
     
      <bool name="config_zramWriteback">true</bool>
+     
+    <!-- Enforce DisplayModeDirector to select user preferred resolution -->
+    <bool name="config_forceToUseSelectedResolution">true</bool>
 </resources>
