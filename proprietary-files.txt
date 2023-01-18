@@ -133,9 +133,17 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so
 vendor/lib64/vendor.qti.hardware.fm@1.0.so
 
-# Bluetooth aptX - from crosshatch - RQ1A.201205.003
-system_ext/lib64/libaptXHD_encoder.so|e13fa70c97caaa24d061678bdee608eb8850a69e
-system_ext/lib64/libaptX_encoder.so|df1c89d7af1bb35808d5fe3496b04ba066c10cbc
+# Bluetooth aptX - from cheetah and QSSI 13
+system_ext/lib64/libaptXHD_encoder.so
+system_ext/lib64/libaptX_encoder.so
+system/lib/libldacBT_abr.so
+system/lib/libldacBT_enc.so
+system/lib/liblhdc.so
+system/lib/liblhdcBT_enc.so
+system/lib64/libldacBT_abr.so
+system/lib64/libldacBT_enc.so
+system/lib64/liblhdc.so
+system/lib64/liblhdcBT_enc.so
 
 # Camera (odm)
 odm/etc/camera/ashdr/ncf_pack.ncf
