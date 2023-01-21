@@ -77,6 +77,8 @@ void vendor_load_properties() {
        /* OnePlus 8T */
     case 19805:
           device = "OnePlus8T";
+            /* Override usb name to OnePlus 8T */
+          property_override("vendor.usb.product_string", "OnePlus 8T");
       switch (rf_version){
            /* China */
         case 11:
