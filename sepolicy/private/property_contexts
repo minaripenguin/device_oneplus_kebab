@@ -38,7 +38,8 @@ ro.camera.res.fmq.size                  	 u:object_r:system_exported_camera_prop
 
 # Build
 ro.build.display.full_id                u:object_r:system_exported_build_prop:s0
-ro.hardware.chipname            u:object_r:system_exported_build_prop:s0
+ro.hardware.chipname            	u:object_r:system_exported_build_prop:s0
+ro.oem_unlock_supported		u:object_r:system_exported_build_prop:s0
 
 # Display
 persist.sys.display.iris.absent         u:object_r:vendor_exported_display_prop:s0
