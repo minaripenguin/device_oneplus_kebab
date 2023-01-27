@@ -5,4 +5,5 @@ r_dir_file(vendor_mdm_helper, vendor_proc_engineer)
 r_dir_file(vendor_mdm_helper, vendor_proc_oplus_version)
 
 get_prop(vendor_mdm_helper, vendor_radio_prop)
+get_prop(vendor_mdm_helper, vendor_exported_modem_prop)
 set_prop(vendor_mdm_helper, vendor_modem_prop)
