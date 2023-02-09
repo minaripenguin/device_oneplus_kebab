@@ -5,6 +5,7 @@ persist.sys.bt.a2dp.pendingtime                  u:object_r:exported_system_prop
 NA                                     u:object_r:exported_system_prop:s0
 oplus.camera.                          u:object_r:exported_system_prop:s0
 persist.camera.                        u:object_r:exported_system_prop:s0
+persist.sys.oplus.                     u:object_r:exported_system_prop:s0
 persist.vendor.apsSN.algo.enable       u:object_r:exported_system_prop:s0
 persist.vendor.facebeauty.dump         u:object_r:exported_system_prop:s0
 persist.vendor.supernight.dump         u:object_r:exported_system_prop:s0
@@ -58,6 +59,7 @@ ro.boot.flash.locked    	       u:object_r:exported_system_prop:s0
 persist.al.cfr.loglevel             u:object_r:exported_system_prop:s0
 persist.sys.log.                    u:object_r:exported_system_prop:s0
 persist.sys.assert.panic            u:object_r:exported_system_prop:s0
+persist.sys.debuglog.config         u:object_r:exported_system_prop:s0
 
 # Modem
 ro.oplus.radio.sip_busy_tone                u:object_r:vendor_exported_modem_prop:s0
@@ -67,6 +69,7 @@ persist.sys.oplus.wifi.fulldump.enable      u:object_r:vendor_exported_modem_pro
 
 # Radio
 ro.sys.reserve.integrate    u:object_r:exported_system_prop:s0
+sys.oplus_boot_mode         u:object_r:exported_system_prop:s0
 
 # SVN
 ro.build.version.svn      u:object_r:exported_system_prop:s0
