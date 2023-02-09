@@ -98,8 +98,10 @@ vendor/lib/libadsprpc.so
 vendor/lib/libaudcal.so
 vendor/lib/libaudio_log_utils.so
 vendor/lib/libaudioparsers.so
+vendor/lib/libbatterylistener.so
 vendor/lib/libhdmipassthru.so
 vendor/lib64/libadsprpc.so
+vendor/lib64/libbatterylistener.so
 
 # Audio firmware
 odm/firmware/tfa98xx.cnt
