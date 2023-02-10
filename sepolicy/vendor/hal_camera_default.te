@@ -3,6 +3,7 @@ hal_attribute_hwservice(hal_camera, vendor_hal_camera_extension_hwservice)
 hal_client_domain(hal_camera_default, vendor_hal_cameraMDM)
 
 allow hal_camera_default vendor_hal_camera_postproc_hwservice:hwservice_manager find;
+allow hal_camera_default vendor_hal_midas_hwservice:hwservice_manager { add find };
 allow hal_camera_default vendor_hal_orms_hwservice:hwservice_manager find;
 
 allow hal_camera_default input_device:dir r_dir_perms;
@@ -35,5 +36,7 @@ binder_call(hal_camera_default, platform_app)
 
 get_prop(hal_camera_default, vendor_exported_camera_prop)
 get_prop(hal_camera_default, system_exported_camera_prop)
+
+binder_call(hal_camera_default, vendor_hal_midas_default)
 
 set_prop(hal_camera_default, vendor_camera_prop)

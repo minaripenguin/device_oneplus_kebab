@@ -96,6 +96,7 @@
 /(vendor|system/vendor)/lib64/libcvface_api\.so                                              u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/libhta\.so                                                     u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/libhta_hexagon_runtime\.so                                     u:object_r:same_process_hal_file:s0
+/(vendor|system/vendor)/lib(64)?/libcamerapostproc\.so                                                                               u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/libipebpsstriping\.so                                          u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/libmorpho_image_refiner_deflicker\.so                          u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/libmpbase\.so                                                  u:object_r:same_process_hal_file:s0
@@ -111,6 +112,9 @@
 /(vendor|system/vendor)/lib64/libyuv2\.so                                                    u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/vendor\.qti\.hardware\.camera\.postproc@1\.0-service-impl\.so  u:object_r:same_process_hal_file:s0
 /(vendor|system/vendor)/lib64/vendor\.qti\.hardware\.camera\.postproc@1\.0\.so               u:object_r:same_process_hal_file:s0
+
+# Cammidasservice
+/(vendor|odm)/bin/hw/vendor.oplus.hardware.cammidasservice@1.0-service                                                               u:object_r:vendor_hal_midas_default_exec:s0
 
 # Display
 /dev/oplus_display                                                                      u:object_r:graphics_device:s0
