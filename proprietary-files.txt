@@ -1110,6 +1110,13 @@ vendor/bin/pm-service|5be0b39d724d4d38f7b5348ca2563699139b125f
 vendor/lib64/libperipheral_client.so|371cc38073c9d9bf8614f992e57a5a9891691191
 vendor/lib64/libspcom.so|14f69e1c6ad4a6bbb5ea0b7e38e027ef1e7fc12a
 
+# Perf - from OOS 13 qssi-user-13-TP1A.220905.001-1670556311503-release-keys--IN
+system/framework/QPerformance.jar
+system/framework/QXPerformance.jar
+system/framework/UxPerformance.jar
+system_ext/lib/libqti_performance.so
+system_ext/lib64/libqti_performance.so
+
 # Power-off alarm (product)
 product/app/PowerOffAlarm/PowerOffAlarm.apk|eda6abb2108245e143eafc66b42c9da2e37d416b
 
