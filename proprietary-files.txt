@@ -643,6 +643,8 @@ system/lib64/vendor.dolby.hardware.dms@2.0.so|0a1cb972160890b07baf3a3e624e9ec127
 system_ext/priv-app/daxService/daxService.apk|ed1de719afc7181a7e896e0eeaf14edc00761c21
 
 # Dolby (vendor) - from OnePlus 9R LE2101 11.2.8.8
+vendor/lib/libhwdaphal.so
+vendor/lib64/libhwdaphal.so
 vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|84247a3563b362e97dacaa79d4845c1292a92f13
 vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc|29296ebfe89b2697fec573be73cc3757fd97bed6
 vendor/lib/soundfx/libeffectproxy.so|44289fe864b085d53c051ad42ed233727ced175c
