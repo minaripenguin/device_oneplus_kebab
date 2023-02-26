@@ -25,3 +25,6 @@ system_public_prop(vendor_sensors_als_prop)
 
 # Version
 system_vendor_config_prop(system_oplus_project_prop)
+
+# Vendor aware
+vendor_public_prop(vendor_aware_available_prop)

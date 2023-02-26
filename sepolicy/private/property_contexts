@@ -81,3 +81,6 @@ persist.sys.support.lbalgo		u:object_r:vendor_sensors_als_prop:s0
 
 # Version
 ro.separate.soft    u:object_r:system_oplus_project_prop:s0
+
+# Vendor Aware
+ro.vendor.aware_available  u:object_r:vendor_aware_available_prop:s0
