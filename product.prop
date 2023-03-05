@@ -119,8 +119,5 @@ persist.sys.aux.camera_oem_package=com.oneplus.camera
 # Camera
 persist.vendor.camera.perflock.enable=0
 
-# Telephony
-ro.telephony.block_binder_thread_on_incoming_calls=false
-
 # Oplus Linearmotor service
 persist.sys.service.enable_oplus_linearmotor=true
