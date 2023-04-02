@@ -12,7 +12,11 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 $(call inherit-product, device/oneplus/kebab/device.mk)
 
 # Inherit some common Lineage stuff.
+TARGET_DISABLE_EPPE := true
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
+# Disable CSI checking
+PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := false
 
 # Sushi Boot Animation
 SUSHI_BOOTANIMATION  := 1080
