@@ -154,6 +154,6 @@ void vendor_load_properties() {
     set_ro_build_prop("model", model);
     set_ro_build_prop("name", name);
     set_ro_build_prop("product", model, false);
-    property_override("ro.rice.chipset", "Snapdragon 870 5G");
-    property_override("ro.rice.maintainer", "minaripenguin");
+    property_override("ro.rising.chipset", "Snapdragon 870 5G");
+    property_override("ro.rising.maintainer", "minaripenguin");
 }

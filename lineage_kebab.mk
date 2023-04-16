@@ -18,11 +18,8 @@ $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 # Disable CSI checking
 PRODUCT_ENFORCE_ARTIFACT_PATH_REQUIREMENTS := false
 
-# Sushi Boot Animation
-SUSHI_BOOTANIMATION  := 1080
-
 # Official
-RICE_MAINTAINER := minaripenguin
+RISING_MAINTAINER := minaripenguin
 WITH_GMS := true
 TARGET_CORE_GMS := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
